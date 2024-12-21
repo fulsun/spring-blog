@@ -1,0 +1,5 @@
+spring:
+  flyway:
+    fail-on-missing-locations: true # 迁移脚本不存在时，是否报错
+    locations:
+      - classpath:db

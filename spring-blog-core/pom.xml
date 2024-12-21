@@ -52,6 +52,16 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <!--flyway-core依赖-->
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
+        <!--flyway-mysql依赖-->
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-mysql</artifactId>
+        </dependency>
     </dependencies>
 
 
