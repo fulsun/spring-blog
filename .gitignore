@@ -38,3 +38,7 @@ build/
 .DS_Store
 
 **/rebel.xml
+**/logs/info.*log
+/mybatis_generator/src/main/java/pers/fulsun/blog/web/admin/entities/*.java
+/mybatis_generator/src/main/java/pers/fulsun/blog/web/admin/mapper/*.java
+/mybatis_generator/src/main/resources/pers/fulsun/blog/web/admin/mappers/*.xml
