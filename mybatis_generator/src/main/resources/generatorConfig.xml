@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <properties resource="config.properties"/>
+
+    <context id="mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <!-- 生成的 Java 文件的编码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <!-- 格式化 Java 代码 -->
+        <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"/>
+        <!-- 格式化 XML 代码 -->
+        <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+            <property name="caseSensitive" value="true"/>
+            <property name="forceAnnotation" value="true"/>
+            <property name="beginningDelimiter" value="`"/>
+            <property name="endingDelimiter" value="`"/>
+            <!--配置是否启用lombok, 支持如下6种注解-->
+            <!--当配置 Data 后，Getter Setter ToString EqualsAndHashCode 会被忽略-->
+            <!--Getter,Setter,Data,ToString,Accessors,EqualsAndHashCode-->
+            <property name="lombok" value="Data"/>
+        </plugin>
+
+        <commentGenerator>
+            <!-- 是否生成注释 -->
+            <property name="suppressAllComments" value="false"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="${jdbc.driverClass}"
+                        connectionURL="${jdbc.url}"
+                        userId="${jdbc.username}"
+                        password="${jdbc.password}"/>
+        <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer true，把JDBC DECIMAL 和
+                  NUMERIC 类型解析为java.math.BigDecimal -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="${package.name}.entities" targetProject="src/main/java">
+            <!-- enableSubPackages：是否让生成的Java文件保存在子包中，即targetPackage.schema.table.java -->
+            <property name="enableSubPackages" value="true"/>
+            <!-- 从数据库返回的值被清理前后的空格 -->
+            <property name="trimStrings" value="true"/>
+            <!-- 是否对model中的类名进行驼峰式命名，默认false -->
+            <property name="forceJavaNamingConvention" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="${package.name}.mappers" targetProject="src/main/resources"/>
+        <javaClientGenerator targetPackage="${package.name}.mapper" targetProject="src/main/java" type="XmlMapper"/>
+
+        <table tableName="t_config" domainObjectName="Config">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+    </context>
+</generatorConfiguration>
