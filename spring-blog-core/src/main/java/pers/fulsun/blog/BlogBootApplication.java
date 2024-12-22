@@ -5,9 +5,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
+import tk.mybatis.spring.annotation.MapperScan;
 
 @Slf4j
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@MapperScan("pers.fulsun.blog.web.admin.mapper")
 public class BlogBootApplication {
 
     public static void main(String[] args) {
