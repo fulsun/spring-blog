@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pers.fulsun.blog.web.admin.mapper.PostCommentMapper">
+  <resultMap id="BaseResultMap" type="pers.fulsun.blog.web.admin.entities.PostComment">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="post_id" jdbcType="INTEGER" property="postId" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="is_blogger" jdbcType="TINYINT" property="isBlogger" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="p_id" jdbcType="INTEGER" property="pId" />
+    <result column="banner_id" jdbcType="INTEGER" property="bannerId" />
+    <result column="source_nickname" jdbcType="VARCHAR" property="sourceNickname" />
+    <result column="is_delete" jdbcType="TINYINT" property="isDelete" />
+    <result column="ip_address" jdbcType="VARCHAR" property="ipAddress" />
+    <result column="browser" jdbcType="VARCHAR" property="browser" />
+    <result column="praise_num" jdbcType="INTEGER" property="praiseNum" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+</mapper>

@@ -38,7 +38,7 @@
                         password="${jdbc.password}"/>
         <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer true，把JDBC DECIMAL 和
                   NUMERIC 类型解析为java.math.BigDecimal -->
-        <javaTypeResolver  type="pers.fulsun.generator.type.TypeResolverDefaultImpl">
+        <javaTypeResolver type="pers.fulsun.generator.type.TypeResolverDefaultImpl">
             <property name="forceBigDecimals" value="true"/>
             <property name="useJSR310Types" value="true"/>
         </javaTypeResolver>
@@ -56,6 +56,24 @@
         <javaClientGenerator targetPackage="${package.name}.mapper" targetProject="src/main/java" type="XmlMapper"/>
 
         <table tableName="t_config" domainObjectName="Config">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="t_user" domainObjectName="User">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="t_user_extend" domainObjectName="UserExtend">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="t_post" domainObjectName="Post">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="t_post_comment" domainObjectName="PostComment">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="t_post_tag" domainObjectName="PostTag">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="t_friend_link" domainObjectName="FriendLink">
             <generatedKey column="id" sqlStatement="JDBC"/>
         </table>
     </context>

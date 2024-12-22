@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pers.fulsun.blog.web.admin.mapper.PostMapper">
+  <resultMap id="BaseResultMap" type="pers.fulsun.blog.web.admin.entities.Post">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="summary" jdbcType="VARCHAR" property="summary" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="year" jdbcType="CHAR" property="year" />
+    <result column="month" jdbcType="CHAR" property="month" />
+    <result column="day" jdbcType="CHAR" property="day" />
+    <result column="cover_url" jdbcType="VARCHAR" property="coverUrl" />
+    <result column="publish_date" jdbcType="VARCHAR" property="publishDate" />
+    <result column="is_publish" jdbcType="TINYINT" property="isPublish" />
+    <result column="is_comment" jdbcType="TINYINT" property="isComment" />
+    <result column="is_top" jdbcType="TINYINT" property="isTop" />
+    <result column="is_delete" jdbcType="TINYINT" property="isDelete" />
+    <result column="is_reprint" jdbcType="TINYINT" property="isReprint" />
+    <result column="reprint_link" jdbcType="VARCHAR" property="reprintLink" />
+    <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="link" jdbcType="VARCHAR" property="link" />
+    <result column="tags" jdbcType="VARCHAR" property="tags" />
+    <result column="read_num" jdbcType="INTEGER" property="readNum" />
+    <result column="praise_num" jdbcType="INTEGER" property="praiseNum" />
+    <result column="comment_num" jdbcType="INTEGER" property="commentNum" />
+    <result column="top_time" jdbcType="TIMESTAMP" property="topTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+</mapper>
