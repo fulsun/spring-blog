@@ -1,11 +1,12 @@
 package pers.fulsun.blog.web.admin.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 
 /**
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
 */
 @Data
 @Table(name = "`t_user`")
+@Accessors(chain = true)
 public class User {
     /**
      * 主键
@@ -60,7 +62,7 @@ public class User {
     private String homeUrl;
 
     /**
-     * 状态
+     * 状态 1：可用 0：禁用
      */
     @Column(name = "`state`")
     private Integer state;

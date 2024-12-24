@@ -70,13 +70,7 @@
         <!--通用mapper依赖-->
         <dependency>
             <groupId>tk.mybatis</groupId>
-            <artifactId>mapper-spring-boot-starter</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>mybatis</artifactId>
-                    <groupId>org.mybatis</groupId>
-                </exclusion>
-            </exclusions>
+            <artifactId>mapper</artifactId>
         </dependency>
         <!--模板引擎依赖-->
         <dependency>

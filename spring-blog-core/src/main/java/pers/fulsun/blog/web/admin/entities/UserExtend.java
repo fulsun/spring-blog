@@ -1,11 +1,12 @@
 package pers.fulsun.blog.web.admin.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 
 /**
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
 */
 @Data
 @Table(name = "`t_user_extend`")
+@Accessors(chain = true)
 public class UserExtend {
     /**
      * 主键

@@ -73,7 +73,7 @@
         <table tableName="t_post_tag" domainObjectName="PostTag">
             <generatedKey column="id" sqlStatement="JDBC"/>
         </table>
-        <table tableName="t_friend_link" domainObjectName="FriendLink">
+        <table tableName="t_category" domainObjectName="Category">
             <generatedKey column="id" sqlStatement="JDBC"/>
         </table>
     </context>

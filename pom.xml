@@ -24,6 +24,7 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.boot.version>3.2.0</spring.boot.version>
+        <mapper.version>4.2.3</mapper.version>
     </properties>
 
     <dependencyManagement>
@@ -52,8 +53,8 @@
             </dependency>
             <dependency>
                 <groupId>tk.mybatis</groupId>
-                <artifactId>mapper-spring-boot-starter</artifactId>
-                <version>5.0.1</version>
+                <artifactId>mapper</artifactId>
+                <version>${mapper.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.pig4cloud.plugin</groupId>
