@@ -74,13 +74,13 @@ public class Post {
     private String publishDate;
 
     /**
-     * 是否发表
+     * 是否发表 (0：未发表，1：已发表)
      */
     @Column(name = "`is_publish`")
     private Integer isPublish;
 
     /**
-     * 是否允许评论
+     * 是否允许评论 (0：不允许，1：允许)
      */
     @Column(name = "`is_comment`")
     private Integer isComment;
