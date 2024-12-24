@@ -1,5 +1,6 @@
 package pers.fulsun.blog.common.response;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import pers.fulsun.blog.common.exception.GlobalExceptionMap;
 
@@ -32,6 +33,7 @@ public class Result {
     /**
      * 响应时间戳
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime dateTime;
     /**
      * 操作是否成功
