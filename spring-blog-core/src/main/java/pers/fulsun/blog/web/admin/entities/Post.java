@@ -1,7 +1,7 @@
 package pers.fulsun.blog.web.admin.entities;
 
-
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 */
 @Data
 @Table(name = "`t_post`")
+@Accessors(chain = true)
 public class Post {
     /**
      * 主键
@@ -163,8 +164,20 @@ public class Post {
     private LocalDateTime updateTime;
 
     /**
-     * 内容（md 格式）
+     * 摘要（html 格式）
+     */
+    @Column(name = "`summary_html`")
+    private String summaryHtml;
+
+    /**
+     * 内容（原内容）
      */
     @Column(name = "`content`")
     private String content;
+
+    /**
+     * 内容（html 格式）
+     */
+    @Column(name = "`content_html`")
+    private String contentHtml;
 }

@@ -29,6 +29,8 @@
     <result column="top_time" jdbcType="TIMESTAMP" property="topTime" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="summary_html" jdbcType="LONGVARCHAR" property="summaryHtml" />
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    <result column="content_html" jdbcType="LONGVARCHAR" property="contentHtml" />
   </resultMap>
 </mapper>
