@@ -66,6 +66,11 @@
                 <artifactId>UserAgentUtils</artifactId>
                 <version>1.21</version>
             </dependency>
+            <dependency>
+                <groupId>org.commonmark</groupId>
+                <artifactId>commonmark</artifactId>
+                <version>0.24.0</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
