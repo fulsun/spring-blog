@@ -2,6 +2,7 @@ package pers.fulsun.blog.web.admin.entities;
 
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
@@ -15,6 +16,7 @@ import java.time.LocalDateTime;
 */
 @Data
 @Table(name = "`t_config`")
+@Accessors(chain = true)
 public class Config {
     /**
      * 主键
