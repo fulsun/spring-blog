@@ -30,7 +30,7 @@ public class BrowserUtil {
      * @param httpServletRequest
      * @return
      */
-    public static Object getBrowserName(HttpServletRequest httpServletRequest) {
+    public static String getBrowserName(HttpServletRequest httpServletRequest) {
         Browser browser = getBrowser(httpServletRequest);
         return browser.getName();
     }
